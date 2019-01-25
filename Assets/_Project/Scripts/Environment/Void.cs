@@ -19,7 +19,6 @@ namespace GlobalGameJam2019
 		    Shrink();
 	    }
 
-
 	    #endregion MonoBehaviour
 	
 		#region Private Methods
