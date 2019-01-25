@@ -2,7 +2,7 @@
 
 namespace GlobalGameJam2019
 {
-    public class SafeZone : MonoBehaviour
+    public class Player : MonoBehaviour
     {
 		#region Private Variables
 
@@ -14,12 +14,14 @@ namespace GlobalGameJam2019
 
 	    private void OnTriggerEnter2D(Collider2D other)
 	    {
-		    if (other.GetComponent<Player>() != null) _void.enabled = false;
-	    }
+		    LightController lc = other.GetComponent<LightController>();
 
-	    private void OnTriggerExit2D(Collider2D other)
-	    {
-		    if (other.GetComponent<Player>() != null) _void.enabled = true;
+		    if (lc)
+		    {
+			    float weight = lc.GetWeight();
+				_void.Expand(weight);
+			    Destroy(other.gameObject);
+		    }
 	    }
 
 	    #endregion MonoBehaviour

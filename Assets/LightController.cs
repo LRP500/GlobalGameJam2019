@@ -1,34 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(CircleCollider2D))]
 public class LightController : MonoBehaviour
 {
-    // Public variables
-    public UnityEvent<float> _event;
+    [SerializeField] private float _weight;
 
-    // Private variables
-    private CircleCollider2D circleCollider = null;
-
-    // Start is called before the first frame update
-    void Start()
+    [MinMaxRange(1, 100)] public FloatRange _size = new FloatRange(0, 0);
+    
+    private CircleCollider2D _collider;
+    
+    private void Start()
     {
-        this.circleCollider = this.GetComponent<CircleCollider2D>();
-        if (this.circleCollider == null)
-        {
-            Debug.LogError("No CircleCollider2D found.", this);
-        }
+        var scale = Random.Range(_size.Min, _size.Max);
+        transform.localScale = new Vector3(scale, scale, 0);
+        _collider = gameObject.AddComponent<CircleCollider2D>();
+        _collider.isTrigger = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public float GetWeight()
     {
-        _event.Invoke(this.circleCollider.radius);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return _collider.radius * _weight;
     }
 }

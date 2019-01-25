@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float speed = 10.0f;
+    [SerializeField] private float _speed = 10.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -15,8 +13,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float translationX = Input.GetAxis("Horizontal") * speed;
-        float translationY = Input.GetAxis("Vertical") * speed;
+        float translationX = Input.GetAxis("Horizontal") * _speed;
+        float translationY = Input.GetAxis("Vertical") * _speed;
 
         translationX *= Time.deltaTime;
         translationY *= Time.deltaTime;

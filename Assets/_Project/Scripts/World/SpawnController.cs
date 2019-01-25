@@ -1,37 +1,44 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnController : MonoBehaviour
 {
-
     // Public variables
     public GameObject spriteToSpawn;
     public CircleCollider2D spawnArea;
-    public uint numberOfSprites = 10;
+    public uint _maxCount = 10;
 
-    // Private variables
-    private uint currentNumOfSprites = 0;
+    public GameObject _voidArea;
+    
+    private List<GameObject> _lights = new List<GameObject>();
 
-    // Spawns numberOfSprites spriteToSpawn game objects
-    void SpawnObjects()
+    private void Start()
     {
-        for (uint i = currentNumOfSprites; i < numberOfSprites; i++)
+        for (int i = 0; i < _maxCount; i++)
         {
-            Instantiate(spriteToSpawn, Random.insideUnitCircle * spawnArea.radius, Quaternion.identity, this.transform);
-            currentNumOfSprites++;
+            InstanciateSingle();
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        SpawnObjects();
+        spawnArea.radius = _voidArea.transform.localScale.x / 3f;
+        
+        foreach (GameObject lightObject in _lights)
+        {
+            if (lightObject == null)
+            {
+                _lights.Remove(lightObject);
+                InstanciateSingle();
+                return;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void InstanciateSingle()
     {
-        
+        var instance = Instantiate(spriteToSpawn, Random.insideUnitCircle * spawnArea.radius,
+            Quaternion.identity, transform);
+        _lights.Add(instance);
     }
 }
