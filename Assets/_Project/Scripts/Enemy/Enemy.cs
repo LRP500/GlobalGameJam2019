@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IA_enemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public GameObject Player;
     public float movementSpeed = 5;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script_PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     float speed = 10.0f;
 
