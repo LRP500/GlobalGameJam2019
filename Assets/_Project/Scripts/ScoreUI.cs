@@ -30,7 +30,8 @@ namespace GlobalGameJam2019
 	    {
 		    _scoreText.enabled = true;
 		    Vector2 position = (Vector2)source + (Random.insideUnitCircle * _sourceRadius);
-		    _scoreText.gameObject.transform.position = Camera.main.WorldToScreenPoint(position);
+//		    _scoreText.gameObject.transform.position = Camera.main.WorldToScreenPoint(position);
+		    _scoreText.gameObject.transform.position = position;
 		    yield return new WaitForSeconds(_displayTime);
 		    _scoreText.enabled = false;
 	    }
