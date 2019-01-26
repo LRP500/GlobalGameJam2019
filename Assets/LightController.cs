@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using Cinemachine;
+using ScriptableObjects;
+using UnityEngine;
 using Variables;
 
-[RequireComponent(typeof(CircleCollider2D))]
 public class LightController : MonoBehaviour
 {
     [SerializeField]
@@ -14,6 +16,10 @@ public class LightController : MonoBehaviour
     [SerializeField]
     private IntVariable _playerScore;
 
+    [SerializeField] private ParticleSystem _particles;
+
+    [SerializeField] private GameObjectReference _spawnController;
+    
     private CircleCollider2D _collider;
     
     private void Start()
@@ -24,6 +30,22 @@ public class LightController : MonoBehaviour
         _collider.isTrigger = true;
     }
 
+    public void Destroy()
+    {
+        StartCoroutine(DelayedDestroy());
+    }
+
+    private IEnumerator DelayedDestroy()
+    {
+        Destroy(GetComponent<CircleCollider2D>());
+        Destroy(GetComponent<SpriteRenderer>());
+        GetComponent<CinemachineImpulseSource>().GenerateImpulse();
+        _spawnController.Value.GetComponent<SpawnController>().InstanciateSingle();
+        _particles.Play();
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
+    
     public float GetWeight()
     {
         return _collider.radius * _weight;
