@@ -385,6 +385,11 @@ PrefabInstance:
       propertyPath: _voidArea
       value: 
       objectReference: {fileID: 1270461065}
+    - target: {fileID: 7045266042247680329, guid: 6f816ccacb83246b3908af7c6f2bc9ce,
+        type: 3}
+      propertyPath: safeArea
+      value: 
+      objectReference: {fileID: 806831185}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f816ccacb83246b3908af7c6f2bc9ce, type: 3}
 --- !u!4 &81576549 stripped
@@ -1152,6 +1157,12 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!58 &806831185 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8935176136716234712, guid: 595d0d6d0c97649e48e965116069ac24,
+    type: 3}
+  m_PrefabInstance: {fileID: 6804308182886375552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &966044724
 GameObject:
   m_ObjectHideFlags: 0

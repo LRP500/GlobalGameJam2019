@@ -7,6 +7,7 @@ public class SpawnController : MonoBehaviour
 {
     public GameObject spriteToSpawn;
     public CircleCollider2D spawnArea;
+    public CircleCollider2D safeArea;
     public GameObject _voidArea;
     public GameObjectReference _runtimeReference;
 
@@ -38,8 +39,10 @@ public class SpawnController : MonoBehaviour
     
     public void InstanciateSingle()
     {
+        var max = (spawnArea.radius * 0.9f);
+        var min = (safeArea.radius + safeArea.radius * 0.5f);
         var sphere = Instantiate(spriteToSpawn,
-            Random.insideUnitCircle * (spawnArea.radius * 0.9f),
+            Random.insideUnitCircle * ((max-min) + min),
             Quaternion.identity, transform);
         _spheres.Add(sphere);
 
