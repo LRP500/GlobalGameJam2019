@@ -28,7 +28,7 @@ public class SpawnController : MonoBehaviour
 
     public void DestroySphere(LightController sphere)
     {
-        if (_spheres.Count > 1)
+        if (_spheres.Count != 1)
         {
             _spheres.Remove(sphere.gameObject);
             Destroy(sphere.gameObject);
