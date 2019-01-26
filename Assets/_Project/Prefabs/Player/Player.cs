@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Cinemachine;
+using UnityEngine;
 
 namespace GlobalGameJam2019
 {
@@ -26,6 +27,8 @@ namespace GlobalGameJam2019
 			    
 			    _score += (int)other.transform.localScale.x;
 			    _scoreUi.Display(_score, other.transform.position);
+			    
+			    lc.GetComponent<CinemachineImpulseSource>().GenerateImpulse();
 			    
 			    Destroy(other.gameObject);
 		    }

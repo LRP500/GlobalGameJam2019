@@ -1,15 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Cinemachine;
 using UnityEngine;
 
 namespace GlobalGameJam2019
 {
     public class MaskController : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        [SerializeField] private CinemachineImpulseSource _shake;
 
+        private void Awake()
+        {
+            _shake = GetComponent<CinemachineImpulseSource>();
         }
 
         private void OnTriggerExit2D(Collider2D other)
@@ -17,14 +17,9 @@ namespace GlobalGameJam2019
             PlayerMovement player = other.GetComponent<PlayerMovement>();
             if (player != null)
             {
+                _shake.GenerateImpulse();
                 player.EnableRepulsion();
             }
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }
