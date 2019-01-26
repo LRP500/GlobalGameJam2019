@@ -6,8 +6,6 @@ namespace GlobalGameJam2019
 {
     public class MaskController : MonoBehaviour
     {
-
-        public float _repulsion = 6f;
         // Start is called before the first frame update
         void Start()
         {
@@ -19,7 +17,7 @@ namespace GlobalGameJam2019
             PlayerMovement player = other.GetComponent<PlayerMovement>();
             if (player != null)
             {
-                player.enableRepulsion();
+                player.EnableRepulsion();
             }
         }
 

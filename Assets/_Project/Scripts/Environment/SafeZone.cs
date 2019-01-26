@@ -17,7 +17,7 @@ namespace GlobalGameJam2019
             PlayerMovement player = other.GetComponent<PlayerMovement>();
             if (player != null)
             {
-                player.disableRepulsion();
+                player.DisableRepulsion();
             }
 	    }
 

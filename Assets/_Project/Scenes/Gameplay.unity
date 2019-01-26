@@ -698,7 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreText: {fileID: 590738391}
-  _sourceRadius: 15
+  _sourceRadius: 10
   _displayTime: 2
 --- !u!114 &591222562 stripped
 MonoBehaviour:
@@ -2372,12 +2372,12 @@ PrefabInstance:
     - target: {fileID: 8133644361635795093, guid: 0a4a9775f0b504ec58d32d6ce3f208df,
         type: 3}
       propertyPath: _speed
-      value: 6
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8133644361635795093, guid: 0a4a9775f0b504ec58d32d6ce3f208df,
         type: 3}
       propertyPath: _gravity
-      value: 4.4
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8133644361635795093, guid: 0a4a9775f0b504ec58d32d6ce3f208df,
         type: 3}

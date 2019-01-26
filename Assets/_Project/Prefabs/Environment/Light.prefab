@@ -111,11 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weight: 10
   _size:
-<<<<<<< HEAD
-    Min: 4
-    Max: 20.25
-=======
     Min: 5.125
     Max: 25.75
   _playerScore: {fileID: 11400000, guid: 8e6f9899bb3a34df696163c901d6db94, type: 2}
->>>>>>> 6aff66afef7c5d3137b7684b4be23b200327fa2b
