@@ -385,6 +385,11 @@ PrefabInstance:
       propertyPath: _voidArea
       value: 
       objectReference: {fileID: 1270461065}
+    - target: {fileID: 7045266042247680329, guid: 6f816ccacb83246b3908af7c6f2bc9ce,
+        type: 3}
+      propertyPath: _randomSpawn
+      value: 0.02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f816ccacb83246b3908af7c6f2bc9ce, type: 3}
 --- !u!4 &81576549 stripped

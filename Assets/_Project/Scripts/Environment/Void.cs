@@ -41,8 +41,8 @@ namespace GlobalGameJam2019
 	    public void Expand(float value, float ratio)
 	    {
 		    Vector3 scale = _mask.transform.localScale;
-		    scale.x += value + (ratio / 10);
-		    scale.y += value + (ratio / 10);
+		    scale.x += value + ratio;
+		    scale.y += value + ratio;
 		    _mask.transform.localScale = scale;
 	    }
 	    

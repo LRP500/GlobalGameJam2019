@@ -337,12 +337,12 @@ PrefabInstance:
     - target: {fileID: 1824322038488070979, guid: 4751c4a37723b4ed3b83f46cb88123ce,
         type: 3}
       propertyPath: m_ImpulseDefinition.m_AmplitudeGain
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1824322038488070979, guid: 4751c4a37723b4ed3b83f46cb88123ce,
         type: 3}
       propertyPath: m_ImpulseDefinition.m_FrequencyGain
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2031556357916045446, guid: 4751c4a37723b4ed3b83f46cb88123ce,
         type: 3}
