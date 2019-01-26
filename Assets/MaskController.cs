@@ -7,6 +7,8 @@ namespace GlobalGameJam2019
     {
         [SerializeField] private CinemachineImpulseSource _shake;
         [SerializeField] private ParticleSystem _particules;
+        [SerializeField] private bool Wilfried;
+        [SerializeField] private float _repulsionForce = 200;
 
         private void Awake()
         {
@@ -15,15 +17,36 @@ namespace GlobalGameJam2019
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            PlayerMovement player = other.GetComponent<PlayerMovement>();
-            if (player != null)
+            if (Wilfried)
             {
-                _particules.transform.position = other.transform.position;
-                _particules.Play();
-                
-                _shake.GenerateImpulse();
-                player.EnableRepulsion();
+                PlayerController player = other.GetComponent<PlayerController>();
+                if (player != null)
+                {
+                    // Wilfried's force impact
+                    var dir = Vector2.zero - (Vector2)player.transform.position;
+                    Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+                    rb.AddForce(dir.normalized * _repulsionForce, ForceMode2D.Impulse);
+
+                    JuiceThatShitUp(other.transform.position);
+                } 
             }
+            else
+            {
+                PlayerMovement player = other.GetComponent<PlayerMovement>();
+                if (player != null)
+                {
+                    // Guillaume's "repulsion"
+                    player.EnableRepulsion();
+                    JuiceThatShitUp(other.transform.position);
+                }
+            }
+        }
+
+        private void JuiceThatShitUp(Vector3 position)
+        {
+            _particules.transform.position = position;
+            _particules.Play();
+            _shake.GenerateImpulse();
         }
     }
 }
