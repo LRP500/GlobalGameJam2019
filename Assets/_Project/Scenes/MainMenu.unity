@@ -778,5 +778,21 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9077413283184540520, guid: 886e6a020f92e40de8c6432698f21794,
+        type: 3}
+      propertyPath: _next.SceneName
+      value: Gameplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077413283184540520, guid: 886e6a020f92e40de8c6432698f21794,
+        type: 3}
+      propertyPath: _next.sceneIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077413283184540520, guid: 886e6a020f92e40de8c6432698f21794,
+        type: 3}
+      propertyPath: _next.Scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 6dee1370965b04c189fa5553baa8f92d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 886e6a020f92e40de8c6432698f21794, type: 3}

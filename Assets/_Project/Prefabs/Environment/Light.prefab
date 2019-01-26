@@ -101,6 +101,9 @@ MonoBehaviour:
   _playerScore: {fileID: 11400000, guid: 8e6f9899bb3a34df696163c901d6db94, type: 2}
   _particles: {fileID: 8940687237002302716}
   _spawnController: {fileID: 11400000, guid: 70749111dd3c3410f8d35cbbd2fa708a, type: 2}
+  _lifespan:
+    Min: 5
+    Max: 5
 --- !u!114 &1946208550315118402
 MonoBehaviour:
   m_ObjectHideFlags: 0
