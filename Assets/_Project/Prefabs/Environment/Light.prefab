@@ -157,6 +157,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParticulesBurst
       objectReference: {fileID: 0}
+    - target: {fileID: 6712172619067004186, guid: 6f42b35fab0d1465b9ba9ab25421a13b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6863532411773431186, guid: 6f42b35fab0d1465b9ba9ab25421a13b,
         type: 3}
       propertyPath: m_LocalPosition.x

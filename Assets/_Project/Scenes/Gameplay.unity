@@ -412,6 +412,11 @@ PrefabInstance:
       propertyPath: _doubleSpawnProbability
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7045266042247680329, guid: 6f816ccacb83246b3908af7c6f2bc9ce,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7045266042247680328, guid: 6f816ccacb83246b3908af7c6f2bc9ce,
         type: 3}
       propertyPath: m_Radius
@@ -956,14 +961,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1396964644}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4479880713571236098, guid: d6a2f463cfb5541548e487cf89858adf,
         type: 3}
       propertyPath: m_Name
@@ -1024,21 +1021,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4479880715554511661, guid: d6a2f463cfb5541548e487cf89858adf,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4479880715554511661, guid: d6a2f463cfb5541548e487cf89858adf,
-        type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4479880715554511661, guid: d6a2f463cfb5541548e487cf89858adf,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 884079669, guid: d6a2f463cfb5541548e487cf89858adf, type: 3}
       propertyPath: _void
       value: 
@@ -1047,6 +1029,16 @@ PrefabInstance:
       propertyPath: _scoreUi
       value: 
       objectReference: {fileID: 590738393}
+    - target: {fileID: 2744958907502636127, guid: d6a2f463cfb5541548e487cf89858adf,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744958907502636127, guid: d6a2f463cfb5541548e487cf89858adf,
+        type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6a2f463cfb5541548e487cf89858adf, type: 3}
 --- !u!1 &803910642
@@ -2512,44 +2504,9 @@ PrefabInstance:
       propertyPath: _void
       value: 
       objectReference: {fileID: 1576833148}
-    - target: {fileID: 4229734004128161950, guid: 595d0d6d0c97649e48e965116069ac24,
-        type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229734004128161950, guid: 595d0d6d0c97649e48e965116069ac24,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229734004128161950, guid: 595d0d6d0c97649e48e965116069ac24,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229734004128161950, guid: 595d0d6d0c97649e48e965116069ac24,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229734004128161950, guid: 595d0d6d0c97649e48e965116069ac24,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1068844210, guid: 595d0d6d0c97649e48e965116069ac24, type: 3}
       propertyPath: m_TagString
       value: Void
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599241946467789659, guid: 595d0d6d0c97649e48e965116069ac24,
-        type: 3}
-      propertyPath: m_ImpulseDefinition.m_AmplitudeGain
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599241946467789659, guid: 595d0d6d0c97649e48e965116069ac24,
-        type: 3}
-      propertyPath: m_ImpulseDefinition.m_FrequencyGain
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7804491037111208755, guid: 595d0d6d0c97649e48e965116069ac24,
         type: 3}
@@ -2589,6 +2546,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7804491037111208754, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: m_TagString
+      value: Void
+      objectReference: {fileID: 0}
     - target: {fileID: 6804308181591555826, guid: 595d0d6d0c97649e48e965116069ac24,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2598,6 +2560,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804308181591555825, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: m_TagString
+      value: Void
       objectReference: {fileID: 0}
     - target: {fileID: 5027109246577993847, guid: 595d0d6d0c97649e48e965116069ac24,
         type: 3}
@@ -2619,20 +2586,50 @@ PrefabInstance:
       propertyPath: _repulsionForce
       value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 7804491037111208754, guid: 595d0d6d0c97649e48e965116069ac24,
+    - target: {fileID: 5027109246577993847, guid: 595d0d6d0c97649e48e965116069ac24,
         type: 3}
-      propertyPath: m_TagString
-      value: Void
+      propertyPath: _inputFreezeDelay
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 6804308181591555825, guid: 595d0d6d0c97649e48e965116069ac24,
+    - target: {fileID: 4599241946467789659, guid: 595d0d6d0c97649e48e965116069ac24,
         type: 3}
-      propertyPath: m_TagString
-      value: Void
+      propertyPath: m_ImpulseDefinition.m_AmplitudeGain
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599241946467789659, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_FrequencyGain
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1598170911085289275, guid: 595d0d6d0c97649e48e965116069ac24,
         type: 3}
       propertyPath: m_TagString
       value: Void
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229734004128161950, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229734004128161950, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229734004128161950, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229734004128161950, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229734004128161950, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 595d0d6d0c97649e48e965116069ac24, type: 3}
