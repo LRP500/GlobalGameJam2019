@@ -1668,6 +1668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1301337023}
   - component: {fileID: 1301337024}
+  - component: {fileID: 1301337025}
   m_Layer: 0
   m_Name: CM vcam
   m_TagString: Untagged
@@ -1727,6 +1728,21 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1177013982}
+--- !u!114 &1301337025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301337022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: -1
+  m_Gain: 1
+  m_Use2DDistance: 1
 --- !u!1 &1346138810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,6 +2494,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599241946467789659, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_AmplitudeGain
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599241946467789659, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_FrequencyGain
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 595d0d6d0c97649e48e965116069ac24, type: 3}
