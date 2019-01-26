@@ -37,7 +37,7 @@ public class SpawnController : MonoBehaviour
 
     private void InstanciateSingle()
     {
-        var instance = Instantiate(spriteToSpawn, Random.insideUnitCircle * spawnArea.radius,
+        var instance = Instantiate(spriteToSpawn, Random.insideUnitCircle * (spawnArea.radius * 0.9f),
             Quaternion.identity, transform);
         _lights.Add(instance);
     }

@@ -111,5 +111,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weight: 10
   _size:
-    Min: 5.125
-    Max: 25.75
+    Min: 4
+    Max: 20.25

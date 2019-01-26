@@ -5,7 +5,7 @@ public class LightController : MonoBehaviour
 {
     [SerializeField] private float _weight;
 
-    [MinMaxRange(1, 100)] public FloatRange _size = new FloatRange(0, 0);
+    [MinMaxRange(4, 25)] public FloatRange _size = new FloatRange(4, 20);
     
     private CircleCollider2D _collider;
     
