@@ -24,7 +24,7 @@ public class SpawnController : MonoBehaviour
 
     private void Update()
     {
-        spawnArea.radius = _voidArea.transform.localScale.x / 2f;
+        spawnArea.radius = _voidArea.transform.localScale.x / 1.5f;
         if (Random.value < _randomSpawn) InstanciateSingle();
     }
 

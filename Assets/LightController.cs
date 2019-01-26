@@ -34,7 +34,7 @@ public class LightController : MonoBehaviour
         _collider.isTrigger = true;
         
         // Lifespan
-        Invoke(nameof(Expire), Random.Range(_lifespan.Min, _lifespan.Max));
+//        Invoke(nameof(Expire), Random.Range(_lifespan.Min, _lifespan.Max));
     }
 
     public void Destroy()
