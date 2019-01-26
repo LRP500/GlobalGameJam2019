@@ -1,16 +1,30 @@
-﻿using UnityEngine;
+﻿
+
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D body;
     public float thrust;
+    public float speed;
+    public ParticleSystem ps;
 
     private void Update()
     {
-        if (Input.GetKeyDown("left")) body.AddForce(-Vector3.right * thrust);
-        if (Input.GetKeyDown("right")) body.AddForce(Vector3.right * thrust);
-        if (Input.GetKeyDown("up")) body.AddForce(Vector3.up * thrust);
-        if (Input.GetKeyDown("down")) body.AddForce(-Vector3.up * thrust);
+       // if (Input.GetKeyDown("left")) body.AddForce(-Vector3.right * thrust);
+       // if (Input.GetKeyDown("right")) body.AddForce(Vector3.right * thrust);
+       // if (Input.GetKeyDown("up")) body.AddForce(Vector3.up * thrust);
+       // if (Input.GetKeyDown("down")) body.AddForce(-Vector3.up * thrust);
+
+        Vector3 translation = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+        translation.Normalize();
+        body.AddForce(translation * speed);
+
+        ParticleSystem.MainModule ma = ps.main;
+
+        Debug.Log("Speed + " + body.velocity.magnitude);
+
+        ma.startColor = new Color(body.velocity.magnitude / 300, 0, 0, 1.0f);
     }
 
     /// <summary>
