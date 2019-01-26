@@ -7,6 +7,9 @@ namespace GlobalGameJam2019
 		#region Private Variables
 
 	    [SerializeField] private Void _void;
+	    [SerializeField] private ScoreUI _scoreUi;
+	    
+	    private int _score = 0;
 	    
 		#endregion Private Variables
 	
@@ -20,6 +23,10 @@ namespace GlobalGameJam2019
 		    {
 			    float weight = lc.GetWeight();
 				_void.Expand(weight);
+			    
+			    _score += (int)other.transform.localScale.x;
+			    _scoreUi.Display(_score, other.transform.position);
+			    
 			    Destroy(other.gameObject);
 		    }
 	    }
