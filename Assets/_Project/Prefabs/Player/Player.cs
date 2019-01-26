@@ -8,7 +8,7 @@ namespace GlobalGameJam2019
 
 	    [SerializeField] private Void _void;
 	    [SerializeField] private ScoreUI _scoreUi;
-
+	    
 	    private int _score;
 	    private int _combo = 1; 
 	    
