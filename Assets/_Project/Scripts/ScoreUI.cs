@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Runtime.CompilerServices;
+using System.Text;
 using TMPro;
 using UnityEngine;
 using Variables;
@@ -13,18 +15,24 @@ namespace GlobalGameJam2019
 	    [SerializeField] private float _sourceRadius = 10;
 	    [SerializeField] private float _displayTime = 2f;
 
+	    private StringBuilder _builder;
+
+	    private Vector3 _scale = Vector3.one;
+	    
 	    #endregion Private Variables
 
 	    #region MonoBehaviour
 
+	    private void Awake()
+	    {
+		    _builder = new StringBuilder();
+		    _scoreText.enabled = false;
+		    _scoreText.transform.localScale = _scale;
+	    }
+	    
 	    #endregion MonoBehaviour
 
 	    #region Private Methods
-
-	    private void Awake()
-	    {
-		    _scoreText.enabled = false;
-	    }
 
 	    private IEnumerator DisplayScore(Vector3 source)
 	    {
@@ -41,9 +49,12 @@ namespace GlobalGameJam2019
 
 	    #region Public Methods
 
-	    public void Display(int score, Vector3 source)
+	    public void Display(int score, int combo, Vector3 source)
 	    {
-		    _scoreText.text = score.ToString();
+		    _scoreText.transform.localScale = _scale + (_scale * (combo / 20f));
+		    _builder.Clear();
+		    _builder.AppendFormat("{0} x{1}", score.ToString(), combo.ToString());
+		    _scoreText.text = _builder.ToString();
 		    StartCoroutine(DisplayScore(source));
 	    }
 	    

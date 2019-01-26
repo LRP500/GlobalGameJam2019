@@ -13,8 +13,8 @@ public class SpawnController : MonoBehaviour
     private List<GameObject> _spheres =  new List<GameObject>();
     
     [Range(0, 1)] public float _doubleSpawnProbability = .3f;
+    [Range(0, 1)] public float _randomSpawn = .01f;
 
-    
     private void Start()
     {
         _runtimeReference.SetValue(gameObject);
@@ -23,7 +23,8 @@ public class SpawnController : MonoBehaviour
 
     private void Update()
     {
-        spawnArea.radius = _voidArea.transform.localScale.x / 3f;
+        spawnArea.radius = _voidArea.transform.localScale.x / 2f;
+        if (Random.value < _randomSpawn) InstanciateSingle();
     }
 
     public void DestroySphere(LightController sphere)

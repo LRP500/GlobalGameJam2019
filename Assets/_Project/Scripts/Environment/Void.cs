@@ -15,8 +15,10 @@ namespace GlobalGameJam2019
 
 	    private void Update()
 	    {
-		    if (Input.GetKeyDown(KeyCode.Space)) Expand(10);
+		    if (Input.GetKeyDown(KeyCode.Space)) Expand(10, 1);
 		    Shrink();
+
+		    _shrinkSpeed += Time.deltaTime;
 	    }
 
 	    #endregion MonoBehaviour
@@ -36,11 +38,11 @@ namespace GlobalGameJam2019
 		    _mask.transform.localScale = scale;		    
 	    }
 	    
-	    public void Expand(float value)
+	    public void Expand(float value, float ratio)
 	    {
 		    Vector3 scale = _mask.transform.localScale;
-		    scale.x += value;
-		    scale.y += value;
+		    scale.x += value + (ratio / 10);
+		    scale.y += value + (ratio / 10);
 		    _mask.transform.localScale = scale;
 	    }
 	    

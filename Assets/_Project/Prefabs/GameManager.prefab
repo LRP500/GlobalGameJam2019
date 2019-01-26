@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ad043383d3b48ddae2f065049b1294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverScreen: {fileID: 0}
   _void: {fileID: 0}
-  _safeZone: {fileID: 0}
+  _gameOverScreen: {fileID: 0}
+  _playerTransform: {fileID: 0}

@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shake: {fileID: 1824322038488070979}
   _particules: {fileID: 2031556357916045446}
+  _repulsionForce: 200
 --- !u!114 &1824322038488070979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mask: {fileID: 2774922247524308138}
-  _shrinkSpeed: 10
+  _shrinkSpeed: 40
 --- !u!1 &8714257648678792937
 GameObject:
   m_ObjectHideFlags: 0

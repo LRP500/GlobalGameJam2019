@@ -8,8 +8,9 @@ namespace GlobalGameJam2019
 
 	    [SerializeField] private Void _void;
 	    [SerializeField] private ScoreUI _scoreUi;
-	    
-	    private int _score = 0;
+
+	    private int _score;
+	    private int _combo = 1; 
 	    
 		#endregion Private Variables
 	
@@ -22,11 +23,13 @@ namespace GlobalGameJam2019
 		    if (lc)
 		    {
 			    float weight = lc.GetWeight();
-				_void.Expand(weight);
+				_void.Expand(weight, _combo);
 
 			    _score += (int)other.transform.localScale.x;
-			    _scoreUi.Display(_score, other.transform.position);
-			    
+			    _scoreUi.Display(_score, _combo, other.transform.position);
+
+			    _combo += 1;
+
 			    lc.Destroy();
 		    }
 	    }
@@ -37,6 +40,12 @@ namespace GlobalGameJam2019
 		#endregion Private Methods
 	
 		#region Public Methods
+
+	    public void ComboBreak()
+	    {
+		    _combo = 1;
+	    }
+	    
 		#endregion Public Methods
     }
 }

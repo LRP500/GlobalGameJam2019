@@ -12,6 +12,12 @@ namespace GlobalGameJam2019
 	
 		#region MonoBehaviour
 
+	    private void OnTriggerEnter2D(Collider2D other)
+	    {
+		    var player = other.GetComponent<Player>();
+		    if (player) player.ComboBreak();
+	    }
+
 	    #endregion MonoBehaviour
 	
 		#region Private Methods

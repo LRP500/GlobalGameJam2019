@@ -332,8 +332,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!58 &4479880715554511650
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -403,7 +403,7 @@ PrefabInstance:
     - target: {fileID: 1467746408361423612, guid: af18c8b2354a5c044b465a8e99ff3fc1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1467746408361423612, guid: af18c8b2354a5c044b465a8e99ff3fc1,
         type: 3}
@@ -444,16 +444,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2744958907041741740, guid: af18c8b2354a5c044b465a8e99ff3fc1,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2744958907041741740, guid: af18c8b2354a5c044b465a8e99ff3fc1,
-        type: 3}
-      propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af18c8b2354a5c044b465a8e99ff3fc1, type: 3}

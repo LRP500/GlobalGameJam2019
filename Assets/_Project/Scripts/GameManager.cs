@@ -8,8 +8,8 @@ namespace GlobalGameJam2019
         #region Private Variables
 
         [SerializeField] private Void _void;
-        [SerializeField] private SafeZone _safeZone;
         [SerializeField] private GameObject _gameOverScreen;
+        [SerializeField] private Transform _playerTransform;
         
         #endregion Private Variables
 
@@ -32,8 +32,8 @@ namespace GlobalGameJam2019
 
         private bool EndGameConditions()
         {
-            return _void.GetMaskScale().x < _safeZone.transform.localScale.x &&
-                   _void.GetMaskScale().y < _safeZone.transform.localScale.y;
+            return _void.GetMaskScale().x < _playerTransform.localScale.x &&
+                   _void.GetMaskScale().y < _playerTransform.localScale.y;
         }
         
         #endregion Private Methods
