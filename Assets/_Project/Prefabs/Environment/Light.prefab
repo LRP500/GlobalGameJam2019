@@ -113,3 +113,4 @@ MonoBehaviour:
   _size:
     Min: 5.125
     Max: 25.75
+  _playerScore: {fileID: 11400000, guid: 8e6f9899bb3a34df696163c901d6db94, type: 2}
