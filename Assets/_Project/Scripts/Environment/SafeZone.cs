@@ -16,14 +16,23 @@ namespace GlobalGameJam2019
 	    {
 		    var player = other.GetComponent<Player>();
 		    if (player) player.ComboBreak();
-	    }
 
-	    #endregion MonoBehaviour
-	
-		#region Private Methods
-		#endregion Private Methods
-	
-		#region Public Methods
-		#endregion Public Methods
+            var sprite = GetComponent<SpriteRenderer>();
+            sprite.color = new Color(0.08627451f, 0.509804f, 0.9843138f, 0.09411765f);
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            var sprite = GetComponent<SpriteRenderer>();
+            sprite.color = new Color(0.08627451f, 0.509804f, 0.9843138f, 0.03921569f);
+        }
+
+        #endregion MonoBehaviour
+
+        #region Private Methods
+        #endregion Private Methods
+
+        #region Public Methods
+        #endregion Public Methods
     }
 }
