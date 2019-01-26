@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weight: 10
-  _event: {fileID: 11400000, guid: 330eb160a8ed8ea49aea7c720b6f7891, type: 2}
   _size:
     Min: 10.381638
     Max: 25.75
@@ -154,7 +153,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 21a8bcc60f519a449849ce0c55dc3073, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
