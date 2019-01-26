@@ -1219,6 +1219,26 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!1 &884079667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4479880715554511649, guid: d6a2f463cfb5541548e487cf89858adf,
+    type: 3}
+  m_PrefabInstance: {fileID: 773694022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &884079669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884079667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e211e932dcb94d3d9ece055dade4e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _void: {fileID: 1576833148}
+  _scoreUi: {fileID: 590738393}
 --- !u!1 &966044724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,6 +2618,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Wilfried
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027109246577993847, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: _repulsionForce
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 595d0d6d0c97649e48e965116069ac24, type: 3}
