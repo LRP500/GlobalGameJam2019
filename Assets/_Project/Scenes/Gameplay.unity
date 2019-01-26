@@ -610,8 +610,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -992,7 +992,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 60
+  orthographic size: 120
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1712,7 +1712,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 60
+    OrthographicSize: 120
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -2361,29 +2361,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1576833148}
     - target: {fileID: 1832188207, guid: 0a4a9775f0b504ec58d32d6ce3f208df, type: 3}
-      propertyPath: _score
-      value: 
-      objectReference: {fileID: 11400000, guid: 8e6f9899bb3a34df696163c901d6db94,
-        type: 2}
-    - target: {fileID: 1832188207, guid: 0a4a9775f0b504ec58d32d6ce3f208df, type: 3}
       propertyPath: _scoreUi
       value: 
       objectReference: {fileID: 590738393}
-    - target: {fileID: 8133644361635795093, guid: 0a4a9775f0b504ec58d32d6ce3f208df,
-        type: 3}
-      propertyPath: _speed
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 8133644361635795093, guid: 0a4a9775f0b504ec58d32d6ce3f208df,
-        type: 3}
-      propertyPath: _gravity
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8133644361635795093, guid: 0a4a9775f0b504ec58d32d6ce3f208df,
-        type: 3}
-      propertyPath: _friction
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a4a9775f0b504ec58d32d6ce3f208df, type: 3}
 --- !u!4 &1352666332174265946 stripped
@@ -2475,11 +2455,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1068844211, guid: 595d0d6d0c97649e48e965116069ac24, type: 3}
       propertyPath: m_LocalScale.x
-      value: 180
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 1068844211, guid: 595d0d6d0c97649e48e965116069ac24, type: 3}
       propertyPath: m_LocalScale.y
-      value: 180
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763614948, guid: 595d0d6d0c97649e48e965116069ac24, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763614948, guid: 595d0d6d0c97649e48e965116069ac24, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804308181591555826, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804308181591555826, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 595d0d6d0c97649e48e965116069ac24, type: 3}
