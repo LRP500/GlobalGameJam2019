@@ -1803,7 +1803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597572897}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 803910645}
@@ -1942,6 +1942,21 @@ PrefabInstance:
       propertyPath: _void
       value: 
       objectReference: {fileID: 1576833148}
+    - target: {fileID: 8133644361635795093, guid: 0a4a9775f0b504ec58d32d6ce3f208df,
+        type: 3}
+      propertyPath: _speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133644361635795093, guid: 0a4a9775f0b504ec58d32d6ce3f208df,
+        type: 3}
+      propertyPath: _gravity
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133644361635795093, guid: 0a4a9775f0b504ec58d32d6ce3f208df,
+        type: 3}
+      propertyPath: _friction
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a4a9775f0b504ec58d32d6ce3f208df, type: 3}
 --- !u!4 &1352666332174265946 stripped
@@ -2022,6 +2037,11 @@ PrefabInstance:
       propertyPath: _void
       value: 
       objectReference: {fileID: 1576833148}
+    - target: {fileID: 7804491037111208755, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: _shrinkSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1044544815, guid: 595d0d6d0c97649e48e965116069ac24, type: 3}
       propertyPath: m_LocalPosition.z
       value: -5
