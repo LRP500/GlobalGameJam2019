@@ -9,7 +9,7 @@ public class LightController : MonoBehaviour
     
     [MinMaxRange(1, 100)]
     public FloatRange _size = new FloatRange(0, 0);
-    
+
     [Space]
     [SerializeField]
     private IntVariable _playerScore;

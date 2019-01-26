@@ -8,7 +8,7 @@ namespace GlobalGameJam2019
 
 	    [SerializeField] private GameObject _mask;
 	    [SerializeField] private float _shrinkSpeed;
-	    
+
 		#endregion Private Variables
 	
 		#region MonoBehaviour

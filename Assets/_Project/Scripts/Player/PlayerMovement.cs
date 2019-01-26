@@ -2,18 +2,27 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float _speed = 10.0f;
-    [SerializeField] private float _gravity = 9.8f;
-    [SerializeField] private float _friction = 0.9f;
+    [SerializeField] private float _speed = 300f;
+    [SerializeField] private float _gravity = 200f;
 
     private Rigidbody2D rigidbody;
-    private Vector3 prevSpeed;
+    private bool repulsionSetted = true;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        prevSpeed = new Vector3(0, 0, 0);
+        Vector3 speed = new Vector3(1, 1, 1);
+    }
+
+    public void EnableRepulsion()
+    {
+        repulsionSetted = true;
+    }
+
+    public void DisableRepulsion()
+    {
+        repulsionSetted = false;
     }
 
     // Update is called once per frame
@@ -23,11 +32,12 @@ public class PlayerMovement : MonoBehaviour
         gravity.Normalize();
         gravity *= _gravity;
         Vector3 translation = new Vector3(Input.GetAxis("Horizontal") * _speed, Input.GetAxis("Vertical") * _speed, 0);
-        Vector3 speed = (gravity + translation + (prevSpeed * _friction));
-        Vector3 friction = -gravity * _friction;
+        Vector3 speed = (gravity + translation);
 
-        transform.Translate(speed);
-        //rigidbody.AddForce(friction);
-        prevSpeed = speed;
+        if (repulsionSetted)
+        {
+            speed = gravity;
+        }
+        rigidbody.velocity = speed;
     }
 }

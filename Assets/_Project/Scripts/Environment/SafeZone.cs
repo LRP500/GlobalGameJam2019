@@ -14,7 +14,11 @@ namespace GlobalGameJam2019
 
 	    private void OnTriggerEnter2D(Collider2D other)
 	    {
-		    //if (other.GetComponent<Player>() != null) _void.enabled = false;
+            PlayerMovement player = other.GetComponent<PlayerMovement>();
+            if (player != null)
+            {
+                player.DisableRepulsion();
+            }
 	    }
 
 	    private void OnTriggerExit2D(Collider2D other)
