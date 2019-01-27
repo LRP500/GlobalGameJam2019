@@ -2,27 +2,13 @@
 using Cinemachine;
 using ScriptableObjects;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
-using UnityEngine.Networking;
-using Variables;
 
 public class LightController : MonoBehaviour
 {
-    [SerializeField]
-    private float _weight;
-    
-    [MinMaxRange(1, 100)]
-    public FloatRange _size = new FloatRange(0, 0);
-
-    [Space]
-    [SerializeField]
-    private IntVariable _playerScore;
-
+    [SerializeField] private float _weight;
+    [MinMaxRange(1, 100)] public FloatRange _size = new FloatRange(0, 0);
     [SerializeField] private ParticleSystem _particles;
-
     [SerializeField] private GameObjectReference _spawnController;
-
-    [MinMaxRange(0, 10)] public FloatRange _lifespan = new FloatRange(5, 5);
     
     private CircleCollider2D _collider;
     
@@ -32,9 +18,6 @@ public class LightController : MonoBehaviour
         transform.localScale = new Vector3(scale, scale, 0);
         _collider = gameObject.AddComponent<CircleCollider2D>();
         _collider.isTrigger = true;
-        
-        // Lifespan
-//        Invoke(nameof(Expire), Random.Range(_lifespan.Min, _lifespan.Max));
     }
 
     public void Destroy()
