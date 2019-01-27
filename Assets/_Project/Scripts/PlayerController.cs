@@ -42,16 +42,19 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            var h = Input.GetAxis("Horizontal");
-            var v = Input.GetAxis("Vertical");
-
-            jump = Input.GetAxis("Jump") > 0;
-            if (prevJump != jump)
+            if (!maskCollision)
             {
-                var dir = new Vector2(h, v) * thrust;
-                body.AddForce(dir);
+                var h = Input.GetAxis("Horizontal");
+                var v = Input.GetAxis("Vertical");
+
+                jump = Input.GetAxis("Jump") > 0;
+                if (prevJump != jump)
+                {
+                    var dir = new Vector2(h, v) * thrust;
+                    body.AddForce(dir);
+                }
+                prevJump = jump;
             }
-            prevJump = jump;
         }
     }
 }
