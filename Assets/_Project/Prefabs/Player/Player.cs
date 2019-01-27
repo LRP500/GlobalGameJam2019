@@ -52,13 +52,14 @@ namespace GlobalGameJam2019
 
         public void ComboBreak()
 	    {
-		    _combo.SetValue(1);
             if (_prevCombo != _combo.Value)
             {
                 _event.Play(GetComponent<AudioSource>());
+                _prevCombo = _combo.Value;
             }
-	    }
-	    
-		#endregion Public Methods
+            _combo.SetValue(1);
+        }
+
+        #endregion Public Methods
     }
 }
