@@ -2500,11 +2500,46 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4469135153351019946, guid: 7ead3cf90474a4603b6a934d5b759e64,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469135153351019946, guid: 7ead3cf90474a4603b6a934d5b759e64,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469135153351019946, guid: 7ead3cf90474a4603b6a934d5b759e64,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4469135153351019945, guid: 7ead3cf90474a4603b6a934d5b759e64,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 803910644}
+    - target: {fileID: 4469135153351019945, guid: 7ead3cf90474a4603b6a934d5b759e64,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469135153351019945, guid: 7ead3cf90474a4603b6a934d5b759e64,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469135153351019945, guid: 7ead3cf90474a4603b6a934d5b759e64,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469135153351019945, guid: 7ead3cf90474a4603b6a934d5b759e64,
+        type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4469135153825449173, guid: 7ead3cf90474a4603b6a934d5b759e64,
         type: 3}
       propertyPath: m_AnchorMin.x
