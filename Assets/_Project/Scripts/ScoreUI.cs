@@ -1,9 +1,7 @@
 ﻿using System.Collections;
-using System.Runtime.CompilerServices;
 using System.Text;
 using TMPro;
 using UnityEngine;
-using Variables;
 
 namespace GlobalGameJam2019
 {
@@ -55,7 +53,7 @@ namespace GlobalGameJam2019
 		    _scoreText.transform.localScale = new Vector3(
 			    Mathf.Clamp(scale.x, 1, 10), Mathf.Clamp(scale.y, 1, 10), scale.z);
 		    _builder.Clear();
-		    _builder.AppendFormat("x{1}", combo.ToString());
+		    _builder.AppendFormat("x{0}", combo);
 		    _scoreText.text = _builder.ToString();
 		    StartCoroutine(DisplayScore(source));
 	    }
