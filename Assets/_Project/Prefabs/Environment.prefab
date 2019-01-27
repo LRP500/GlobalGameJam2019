@@ -71,7 +71,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -96,6 +96,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &1270461066
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068844210}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: -100
+  m_DecayTime: 0.8
+  m_DecayHFRatio: 0.83
+  m_ReflectionsLevel: -2602
+  m_ReverbLevel: -1500
+  m_ReverbDelay: 0.011
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 27
 --- !u!1 &1763614947
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 4821372196242477398, guid: 4751c4a37723b4ed3b83f46cb88123ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 4821372196242477398, guid: 4751c4a37723b4ed3b83f46cb88123ce,
         type: 3}
@@ -418,7 +441,7 @@ PrefabInstance:
     - target: {fileID: 5390138237812300587, guid: 4751c4a37723b4ed3b83f46cb88123ce,
         type: 3}
       propertyPath: _shrinkSpeed
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8714257648678792937, guid: 4751c4a37723b4ed3b83f46cb88123ce,
         type: 3}

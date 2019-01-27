@@ -193,19 +193,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7045266042247680329, guid: 6f816ccacb83246b3908af7c6f2bc9ce,
         type: 3}
-      propertyPath: _voidArea
-      value: 
-      objectReference: {fileID: 1270461065}
-    - target: {fileID: 7045266042247680329, guid: 6f816ccacb83246b3908af7c6f2bc9ce,
-        type: 3}
-      propertyPath: _randomSpawn
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045266042247680329, guid: 6f816ccacb83246b3908af7c6f2bc9ce,
-        type: 3}
       propertyPath: safeArea
       value: 
       objectReference: {fileID: 6804308182886375553}
+    - target: {fileID: 7045266042247680329, guid: 6f816ccacb83246b3908af7c6f2bc9ce,
+        type: 3}
+      propertyPath: _voidArea
+      value: 
+      objectReference: {fileID: 1270461065}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f816ccacb83246b3908af7c6f2bc9ce, type: 3}
 --- !u!4 &81576549 stripped
@@ -1959,7 +1954,7 @@ PrefabInstance:
     - target: {fileID: 7804491037111208755, guid: 595d0d6d0c97649e48e965116069ac24,
         type: 3}
       propertyPath: _shrinkSpeed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7235724821438185806, guid: 595d0d6d0c97649e48e965116069ac24,
         type: 3}

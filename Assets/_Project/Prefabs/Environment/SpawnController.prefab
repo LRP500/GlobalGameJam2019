@@ -47,10 +47,11 @@ MonoBehaviour:
   spriteToSpawn: {fileID: 6910508069386721590, guid: 78a40f93247224191bff04831a002314,
     type: 3}
   spawnArea: {fileID: 7045266042247680328}
+  safeArea: {fileID: 0}
   _voidArea: {fileID: 0}
   _runtimeReference: {fileID: 11400000, guid: 70749111dd3c3410f8d35cbbd2fa708a, type: 2}
-  _doubleSpawnProbability: 0.005
-  _randomSpawn: 0.01
+  _doubleSpawnProbability: 0.01
+  _randomSpawn: 0.05
 --- !u!58 &7045266042247680328
 CircleCollider2D:
   m_ObjectHideFlags: 0
