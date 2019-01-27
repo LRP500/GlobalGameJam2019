@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
     public float thrust;
 
     private bool maskCollision = false;
+    private bool gamepadEnabled = false;
+
+    private bool jump = false;
+    private bool prevJump = false;
 
     public void EnableMaskCollision()
     {
@@ -19,14 +23,35 @@ public class PlayerController : MonoBehaviour
         maskCollision = false;
     }
 
+    private void Start()
+    {
+        gamepadEnabled = Input.GetJoystickNames().Length > 0;
+    }
+
     private void Update()
     {
-        if (!maskCollision)
+        if (!gamepadEnabled)
         {
-            if (Input.GetKeyDown("left")) body.AddForce(-Vector3.right * thrust);
-            if (Input.GetKeyDown("right")) body.AddForce(Vector3.right * thrust);
-            if (Input.GetKeyDown("up")) body.AddForce(Vector3.up * thrust);
-            if (Input.GetKeyDown("down")) body.AddForce(-Vector3.up * thrust);
+            if (!maskCollision)
+            {
+                if (Input.GetKeyDown("left")) body.AddForce(-Vector3.right * thrust);
+                if (Input.GetKeyDown("right")) body.AddForce(Vector3.right * thrust);
+                if (Input.GetKeyDown("up")) body.AddForce(Vector3.up * thrust);
+                if (Input.GetKeyDown("down")) body.AddForce(-Vector3.up * thrust);
+            }
+        }
+        else
+        {
+            var h = Input.GetAxis("Horizontal");
+            var v = Input.GetAxis("Vertical");
+
+            jump = Input.GetAxis("Jump") > 0;
+            if (prevJump != jump)
+            {
+                var dir = new Vector2(h, v) * thrust;
+                body.AddForce(dir);
+            }
+            prevJump = jump;
         }
     }
 }

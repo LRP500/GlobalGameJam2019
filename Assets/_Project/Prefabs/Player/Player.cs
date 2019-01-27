@@ -37,14 +37,14 @@ namespace GlobalGameJam2019
 		    }
 	    }
 
-	    #endregion MonoBehaviour
-	
-		#region Private Methods
-		#endregion Private Methods
-	
-		#region Public Methods
+        #endregion MonoBehaviour
 
-	    public void ComboBreak()
+        #region Private Methods
+        #endregion Private Methods
+
+        #region Public Methods
+
+        public void ComboBreak()
 	    {
             if (_prevCombo != _combo)
             {
@@ -52,7 +52,9 @@ namespace GlobalGameJam2019
             }
             _combo = 1;
 	    }
-	    
-		#endregion Public Methods
+
+        #endregion Public Methods
+
+
     }
 }
