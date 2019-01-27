@@ -1235,6 +1235,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1573038040505151591, guid: 75122dba5ea204672a15a8ab687c8e38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75122dba5ea204672a15a8ab687c8e38, type: 3}
 --- !u!1001 &3801931442550221170
@@ -1489,6 +1494,27 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3801931442063075627, guid: 3ea825974a1f040aeba1ed323349797b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134629686382319214, guid: 3ea825974a1f040aeba1ed323349797b,
+        type: 3}
+      propertyPath: _next.SceneName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134629686382319214, guid: 3ea825974a1f040aeba1ed323349797b,
+        type: 3}
+      propertyPath: _next.sceneIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134629686382319214, guid: 3ea825974a1f040aeba1ed323349797b,
+        type: 3}
+      propertyPath: _next.Scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 00ac13585b25f414f9405b42c700d0ba,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ea825974a1f040aeba1ed323349797b, type: 3}
 --- !u!1001 &4469135152205515858
@@ -1746,11 +1772,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 7965590689309632574, guid: c736aec777f6d458c8501c534d28a293,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7965590689309632573, guid: c736aec777f6d458c8501c534d28a293,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1856,6 +1877,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2346513181850932492, guid: c736aec777f6d458c8501c534d28a293,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965590689575346359, guid: c736aec777f6d458c8501c534d28a293,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1671119121326673680, guid: c736aec777f6d458c8501c534d28a293,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1945,6 +1976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682031912138851987, guid: c736aec777f6d458c8501c534d28a293,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Navigate
       objectReference: {fileID: 0}
     - target: {fileID: 1671119121727473480, guid: c736aec777f6d458c8501c534d28a293,
         type: 3}
@@ -1972,16 +2008,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6243788673362244685, guid: c736aec777f6d458c8501c534d28a293,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7352061310365579707, guid: c736aec777f6d458c8501c534d28a293,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7352061310365579707, guid: c736aec777f6d458c8501c534d28a293,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
