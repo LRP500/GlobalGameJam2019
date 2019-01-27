@@ -15,9 +15,7 @@ namespace GlobalGameJam2019
 
 	    private void Update()
 	    {
-		    if (Input.GetKeyDown(KeyCode.Space)) Expand(10, 1);
 		    Shrink();
-
 		    _shrinkSpeed += Time.deltaTime;
 	    }
 

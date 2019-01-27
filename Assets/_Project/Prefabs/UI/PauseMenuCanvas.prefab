@@ -1442,7 +1442,13 @@ PrefabInstance:
       propertyPath: m_textInfo.wordCount
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2252747145462422266, guid: 3cf901309c7c041ef91b27c93c1ead87,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2252747145462422247, guid: 3cf901309c7c041ef91b27c93c1ead87, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3cf901309c7c041ef91b27c93c1ead87, type: 3}
 --- !u!1 &4682031912138851985 stripped
 GameObject:
