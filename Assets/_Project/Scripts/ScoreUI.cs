@@ -59,7 +59,7 @@ namespace GlobalGameJam2019
 	    {
 		    var scale = _scale + (_scale * (combo / 20f));
 		    _scoreText.transform.localScale = new Vector3(
-			    Mathf.Clamp(scale.x, 1, 10), Mathf.Clamp(scale.y, 1, 10), scale.z);
+			    Mathf.Clamp(scale.x, 1, 5), Mathf.Clamp(scale.y, 1, 5), scale.z);
 		    _builder.Clear();
 		    _builder.AppendFormat("x{0}", combo);
 		    _scoreText.text = _builder.ToString();
