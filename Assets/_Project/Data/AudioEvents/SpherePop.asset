@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b72fd094f19044438bce8a8b894e7b6a, type: 3}
-  m_Name: ComboBreak
+  m_Name: SpherePop
   m_EditorClassIdentifier: 
   _clips:
-  - {fileID: 8300000, guid: ea47e5512709247829f9fec4ebaf4398, type: 3}
+  - {fileID: 8300000, guid: ee0d0667eb61741599e3b3498e2a0777, type: 3}
   _volume:
-    Min: 0.15454546
-    Max: 0.18181819
+    Min: 0.09090911
+    Max: 0.3909093
   _pitch:
-    Min: 1.1988609
-    Max: 1.2388611
+    Min: 0.59999996
+    Max: 1.6909089

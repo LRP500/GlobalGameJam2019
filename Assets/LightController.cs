@@ -9,7 +9,8 @@ public class LightController : MonoBehaviour
     [MinMaxRange(1, 100)] public FloatRange _size = new FloatRange(0, 0);
     [SerializeField] private ParticleSystem _particles;
     [SerializeField] private GameObjectReference _spawnController;
-    
+    [SerializeField] private SimpleAudioEvent _audioFeedback;
+
     private CircleCollider2D _collider;
     
     private void Start()
@@ -37,6 +38,7 @@ public class LightController : MonoBehaviour
         GetComponent<CinemachineImpulseSource>().GenerateImpulse();
         _spawnController.Value.GetComponent<SpawnController>().InstanciateSingle();
         _particles.Play();
+        _audioFeedback.Play(GetComponent<AudioSource>());
         yield return new WaitForSeconds(5f);
         Expire();
     }
