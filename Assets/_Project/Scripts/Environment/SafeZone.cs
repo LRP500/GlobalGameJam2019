@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Extensions;
+using UnityEngine;
 
 namespace GlobalGameJam2019
 {
@@ -7,12 +8,17 @@ namespace GlobalGameJam2019
 		#region Private Variables
 
 	    [SerializeField] private Void _void;
-        
-        public Color _color = new Color(0.08627451f, 0.509804f, 0.9843138f, 1f);
+
+	    private Color _color;
 	    
 		#endregion Private Variables
 	
 		#region MonoBehaviour
+
+	    private void Awake()
+	    {
+		    _color = GetComponent<SpriteRenderer>().color;
+	    }
 
 	    private void OnTriggerEnter2D(Collider2D other)
 	    {
