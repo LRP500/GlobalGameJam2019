@@ -199,7 +199,7 @@ PrefabInstance:
     - target: {fileID: 7045266042247680329, guid: 6f816ccacb83246b3908af7c6f2bc9ce,
         type: 3}
       propertyPath: _randomSpawn
-      value: 0.015
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 7045266042247680329, guid: 6f816ccacb83246b3908af7c6f2bc9ce,
         type: 3}
@@ -681,7 +681,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1955,6 +1955,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804491037111208755, guid: 595d0d6d0c97649e48e965116069ac24,
+        type: 3}
+      propertyPath: _shrinkSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7235724821438185806, guid: 595d0d6d0c97649e48e965116069ac24,
         type: 3}
