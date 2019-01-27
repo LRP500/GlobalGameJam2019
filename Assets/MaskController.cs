@@ -38,7 +38,7 @@ namespace GlobalGameJam2019
                 Vector3 position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
                 position.Normalize();
                 position *= transform.localScale.x / 2;
-                player.transform.position = position;
+                player.transform.position = position * .9f;
 
                 JuiceThatShitUp(other.transform.position);
                 StartCoroutine(CollideWithPlayer(player));
