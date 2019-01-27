@@ -11,6 +11,7 @@ namespace GlobalGameJam2019
         [SerializeField] private ParticleSystem _particules;
         [SerializeField] private float _repulsionForce = 200;
         [SerializeField] private float _inputFreezeDelay = .05f;
+        [SerializeField] private SimpleAudioEvent _event;
 
         private void Awake()
         {
@@ -41,6 +42,8 @@ namespace GlobalGameJam2019
 
                 JuiceThatShitUp(other.transform.position);
                 StartCoroutine(CollideWithPlayer(player));
+
+                _event.Play(GetComponent<AudioSource>());
             }
         }
         

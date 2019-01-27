@@ -11,6 +11,9 @@ namespace GlobalGameJam2019
 	    [SerializeField] private ScoreUI _scoreUi;
 	    [SerializeField] private IntVariable _score;
 	    [SerializeField] private IntVariable _combo;
+        [SerializeField] private SimpleAudioEvent _event;
+
+	    private int _prevCombo = 1;
 	    
 		#endregion Private Variables
 	
@@ -34,6 +37,7 @@ namespace GlobalGameJam2019
 			    _score.SetValue(_score + (int)other.transform.localScale.x * _combo);
 			    _scoreUi.Display(_score, _combo, other.transform.position);
 			    _combo.SetValue(_combo + 1);
+                _prevCombo = _combo.Value;
 
 			    lc.Destroy();
 		    }
@@ -49,6 +53,10 @@ namespace GlobalGameJam2019
 	    public void ComboBreak()
 	    {
 		    _combo.SetValue(1);
+            if (_prevCombo != _combo.Value)
+            {
+                _event.Play(GetComponent<AudioSource>());
+            }
 	    }
 	    
 		#endregion Public Methods
