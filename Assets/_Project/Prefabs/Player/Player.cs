@@ -43,22 +43,23 @@ namespace GlobalGameJam2019
 		    }
 	    }
 
-	    #endregion MonoBehaviour
-	
-		#region Private Methods
-		#endregion Private Methods
-	
-		#region Public Methods
+        #endregion MonoBehaviour
 
-	    public void ComboBreak()
+        #region Private Methods
+        #endregion Private Methods
+
+        #region Public Methods
+
+        public void ComboBreak()
 	    {
-		    _combo.SetValue(1);
             if (_prevCombo != _combo.Value)
             {
                 _event.Play(GetComponent<AudioSource>());
+                _prevCombo = _combo.Value;
             }
-	    }
-	    
-		#endregion Public Methods
+            _combo.SetValue(1);
+        }
+
+        #endregion Public Methods
     }
 }
