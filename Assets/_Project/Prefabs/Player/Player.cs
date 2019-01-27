@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Variables;
 
 namespace GlobalGameJam2019
 {
@@ -8,9 +9,8 @@ namespace GlobalGameJam2019
 
 	    [SerializeField] private Void _void;
 	    [SerializeField] private ScoreUI _scoreUi;
-	    
-	    private int _score;
-	    private int _combo = 1; 
+	    [SerializeField] private IntVariable _score;
+	    [SerializeField] private IntVariable _combo;
 	    
 		#endregion Private Variables
 	
@@ -25,10 +25,9 @@ namespace GlobalGameJam2019
 			    float weight = lc.GetWeight();
 				_void.Expand(weight, _combo);
 
-			    _score += (int)other.transform.localScale.x;
+			    _score.SetValue(_score + (int)other.transform.localScale.x * _combo);
 			    _scoreUi.Display(_score, _combo, other.transform.position);
-
-			    _combo += 1;
+			    _combo.SetValue(_combo + 1);
 
 			    lc.Destroy();
 		    }
@@ -43,7 +42,7 @@ namespace GlobalGameJam2019
 
 	    public void ComboBreak()
 	    {
-		    _combo = 1;
+		    _combo.SetValue(1);
 	    }
 	    
 		#endregion Public Methods
