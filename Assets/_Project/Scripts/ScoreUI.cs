@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Text;
+using Extensions;
 using TMPro;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ namespace GlobalGameJam2019
 	    [SerializeField] private TextMeshProUGUI _scoreText;
 	    [SerializeField] private float _sourceRadius = 10;
 	    [SerializeField] private float _displayTime = 2f;
+	    [SerializeField] private TextMeshProUGUI _comboBreak;
 
 	    private StringBuilder _builder;
 
@@ -26,6 +28,12 @@ namespace GlobalGameJam2019
 		    _builder = new StringBuilder();
 		    _scoreText.enabled = false;
 		    _scoreText.transform.localScale = _scale;
+
+		    if (_comboBreak)
+		    {
+			    _comboBreak.transform.rotation = Quaternion.identity;			    
+				_comboBreak.enabled = false;
+		    }
 	    }
 	    
 	    #endregion MonoBehaviour
@@ -57,7 +65,27 @@ namespace GlobalGameJam2019
 		    _scoreText.text = _builder.ToString();
 		    StartCoroutine(DisplayScore(source));
 	    }
-	    
+
+	    public void DisplayComboBreak()
+	    {
+		    if (_comboBreak.enabled == false)
+		    {
+			    Vector3 rotation = _comboBreak.transform.localEulerAngles;
+			    rotation.z = Random.Range(-60, 60);
+			    _comboBreak.transform.localEulerAngles = rotation;
+			    _comboBreak.transform.position = Random.insideUnitCircle * 50;
+			    _comboBreak.fontSize = Random.Range(180, 200);
+			    StartCoroutine(ComboBreak());			    
+		    }
+	    }
+
+	    private IEnumerator ComboBreak()
+	    {
+		    _comboBreak.enabled = true;
+		    yield return new WaitForSeconds(Random.Range(.5f, 1));
+		    _comboBreak.enabled = false;
+	    }
+
 	    #endregion Public Methods
     }
 }

@@ -379,7 +379,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _void: {fileID: 0}
   _scoreUi: {fileID: 0}
+  _score: {fileID: 0}
+  _combo: {fileID: 0}
   _event: {fileID: 11400000, guid: f7a89c40172db4f23bde38edc6d27353, type: 2}
+  _comboBreakEvent: {fileID: 11400000, guid: f7c4cdf7930b84fc58b658c68fa57119, type: 2}
 --- !u!82 &2095510049191012947
 AudioSource:
   m_ObjectHideFlags: 0

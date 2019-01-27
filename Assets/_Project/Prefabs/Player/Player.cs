@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ScriptableObjects.Events;
+using UnityEngine;
 using Variables;
 
 namespace GlobalGameJam2019
@@ -55,6 +56,7 @@ namespace GlobalGameJam2019
             if (_prevCombo != _combo.Value)
             {
                 _event.Play(GetComponent<AudioSource>());
+	            _scoreUi.DisplayComboBreak();
                 _prevCombo = _combo.Value;
             }
             _combo.SetValue(1);
