@@ -16,6 +16,12 @@ namespace GlobalGameJam2019
 	
 		#region MonoBehaviour
 
+	    private void Start()
+	    {
+		    _score.SetValue(0);
+		    _combo.SetValue(1);
+	    }
+
 	    private void OnTriggerEnter2D(Collider2D other)
 	    {
 		    LightController lc = other.GetComponent<LightController>();
