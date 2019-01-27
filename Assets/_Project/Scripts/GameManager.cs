@@ -8,7 +8,7 @@ namespace GlobalGameJam2019
         #region Private Variables
 
         [SerializeField] private Void _void;
-        [SerializeField] private GameObject _gameOverScreen;
+        [SerializeField] private GameOverScreen _gameOverScreen;
         [SerializeField] private Transform _playerTransform;
         
         #endregion Private Variables
@@ -18,7 +18,6 @@ namespace GlobalGameJam2019
         private void Awake()
         {
             Time.timeScale = 1;
-            _gameOverScreen.SetActive(false);
         }
 
         private void Update()
@@ -42,7 +41,7 @@ namespace GlobalGameJam2019
 
         public void GameOver()
         {
-            _gameOverScreen.SetActive(true);
+            _gameOverScreen.Display();
             Time.timeScale = 0;
         }
 
